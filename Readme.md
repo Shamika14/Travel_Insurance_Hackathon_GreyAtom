@@ -1,24 +1,18 @@
-Problem Description
+GreyAtom Sentiment Analysis Hackathon
 
-Insurance companies take risks over customers. Risk management is a very important aspect of the insurance industry. Insurers consider every quantifiable factor to develop profiles of high and low insurance risks. Insurers collect vast amounts of information about policyholders and analyze the data.
+Problem Statement
 
-As a Data scientist in an insurance company, you need to analyze the available data and predict whether to sanction the insurance or not.
+Twitter has now become a useful way to build one's business as it helps in giving the brand a voice and a personality. The platform is also a quick, easy and inexpensive way to gain valuable insight from the desired audience. Identifying the sentiments about the product/brand can help the business take better actions.
+We have been given evaluated tweets about multiple brands. The evaluators(random audience) were asked if the tweet expressed positive, negative, or no emotion towards a product/brand and labelled accordingly.
+
 Dataset Description
 
-A zipped file containing train, test and sample submission files are given. The training dataset consists of data corresponding to 50553 customers and the test dataset consists of 12661 customers. Following are the features of the dataset
+This dataset contains around 7k tweet text with the sentiment label.
 
-    Target: Claim Status (Claim)
-    Name of agency (Agency)
-    Type of travel insurance agencies (Agency.Type)
-    Distribution channel of travel insurance agencies (Distribution.Channel)
-    Name of the travel insurance products (Product.Name)
-    Duration of travel (Duration)
-    Destination of travel (Destination)
-    Amount of sales of travel insurance policies (Net.Sales)
-    The commission received for travel insurance agency (Commission)
-    Gender of insured (Gender)
-    Age of insured (Age)
+The file train.csv has 3 columns
+
+tweet_id - Unique id for tweets. tweet - Tweet about the brand/product sentiment - 0: Negative, 1: Neutral, 2: Positive, 3: Can't Tell
 
 Evaluation Metric
 
-The evaluation metric for this task will be precision_score. Read up about it more here.
+We will be using ‘weighted’ F1-measure as the evaluation metric for this competition. For more information on the F1-metric refer to https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html
